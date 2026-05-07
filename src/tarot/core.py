@@ -1,10 +1,68 @@
 import random
 
 minor_arcana = {
-    'wands' : ["Ace of Wands", "Two of Wands", "Three of Wands", "Four of Wands", "Five of Wands", "Six of Wands", "Seven of Wands", "Eight of Wands", "Nine of Wands", "Ten of Wands", "Page of Wands", "Knight of Wands", "Queen of Wands", "King of Wands"],
-    'cups' : ["Ace of Cups", "Two of Cups", "Three of Cups", "Four of Cups', 'Five of Cups", "Six of Cups", "Seven of Cups', 'Eight of Cups", "Nine of Cups", "Ten of Cups", "Page of Cups", "Knight of Cups", "Queen of Cups", "King of Cups"],
-    'swords' : ["Ace of Swords", "Two of Swords", "Three of Swords", "Four of Swords", "Five of Swords", "Six of Swords", "Seven of Swords", "Eight of Swords", "Nine of Swords", "Ten of Swords", "Page of Swords", "Knight of Swords", "Queen of Swords", "King of Swords"],
-    'disks' : ["Ace of Disks", "Two of Disks", "Three of Disks", "Four of Disks", "Five of Disks", "Six of Disks", "Seven of Disks", "Eight of Disks", "Nine of Disks", "Ten of Disks", "Page of Disks", "Knight of Disks", "Queen of Disks", "King of Disks"],
+    'wands' : [
+        "Ace of Wands",
+        "Two of Wands",
+        "Three of Wands",
+        "Four of Wands",
+        "Five of Wands",
+        "Six of Wands",
+        "Seven of Wands",
+        "Eight of Wands",
+        "Nine of Wands",
+        "Ten of Wands",
+        "Page of Wands",
+        "Knight of Wands",
+        "Queen of Wands",
+        "King of Wands",
+    ],
+    'cups' : [
+        "Ace of Cups",
+        "Two of Cups",
+        "Three of Cups",
+        "Four of Cups', 'Five of Cups",
+        "Six of Cups",
+        "Seven of Cups', 'Eight of Cups",
+        "Nine of Cups",
+        "Ten of Cups",
+        "Page of Cups",
+        "Knight of Cups",
+        "Queen of Cups",
+        "King of Cups",
+    ],
+    'swords' : [
+        "Ace of Swords",
+        "Two of Swords",
+        "Three of Swords",
+        "Four of Swords",
+        "Five of Swords",
+        "Six of Swords",
+        "Seven of Swords",
+        "Eight of Swords",
+        "Nine of Swords",
+        "Ten of Swords",
+        "Page of Swords",
+        "Knight of Swords",
+        "Queen of Swords",
+        "King of Swords",
+    ],
+    'disks' : [
+        "Ace of Disks",
+        "Two of Disks",
+        "Three of Disks",
+        "Four of Disks",
+        "Five of Disks",
+        "Six of Disks",
+        "Seven of Disks",
+        "Eight of Disks",
+        "Nine of Disks",
+        "Ten of Disks",
+        "Page of Disks",
+        "Knight of Disks",
+        "Queen of Disks",
+        "King of Disks",
+    ],
 }
 
 
@@ -208,15 +266,15 @@ def shuffle_deck(num=0):
         card_pool.extend(minor_arcana[suite])
 
     # Major arcana
-    for k, v in major_planets.items():
+    for v in major_planets.values():
       card_pool.append(v)
 
-    for k, v in major_elements.items():
+    for v in major_elements.values():
       if not v:
           continue
       card_pool.append(v)
 
-    for k, v in major_zodiac.items():
+    for v in major_zodiac.values():
       card_pool.append(v) 
 
     print(card_pool)
